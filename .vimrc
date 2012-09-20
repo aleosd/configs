@@ -35,9 +35,10 @@ colorscheme wombat256mod
 set expandtab
 set textwidth=80
 set colorcolumn=80
+highlight ColorColumn ctermbg=233
 set nowrap
 set fo-=t
-set tabstop=8
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
