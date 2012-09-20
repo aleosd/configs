@@ -1,6 +1,14 @@
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
+"Автоматическая перегрузка .vimrc
+autocmd! bufwritepost .vimrc source %
+
+"Quick save
+noremap <C-Z> :update<CR>
+vnoremap <C-Z> <C-C>:update<CR>
+inoremap <C-Z> <C-O>:update<CR>
+
 filetype on
 filetype plugin on
 "По F5 запускаем питон-приложение"
