@@ -22,14 +22,21 @@ let g:miniBufExplModSelTarget = 1
 
 set showmatch
 
+"Show whitespaces"
+"Must be inserted before colorscheme"
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace  /\s\+$/  
+
 "Подсветка с учетом темного фона"
 set background=dark
-" colorscheme torte
 set t_Co=256
 colorscheme wombat256mod
 
 set expandtab
 set textwidth=80
+set colorcolumn=80
+set nowrap
+set fo-=t
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
