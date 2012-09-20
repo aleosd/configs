@@ -24,7 +24,10 @@ set showmatch
 
 "Подсветка с учетом темного фона"
 set background=dark
-colorscheme torte
+" colorscheme torte
+set t_Co=256
+colorscheme wombat256mod
+
 set expandtab
 set textwidth=80
 set tabstop=8
