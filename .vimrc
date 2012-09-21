@@ -4,6 +4,8 @@ au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 "Автоматическая перегрузка .vimrc
 autocmd! bufwritepost .vimrc source %
 
+let mapleader=','
+
 "Quick save
 noremap <C-Z> :update<CR>
 vnoremap <C-Z> <C-C>:update<CR>
@@ -21,6 +23,19 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
 set showmatch
+
+"Disable arrow keys
+noremap <Up> ""
+noremap! <Up> <Esc>
+noremap <Down> ""
+noremap! <Down> <Esc>
+noremap <Left> ""
+noremap! <Left> <Esc>
+noremap <Right> ""
+noremap! <Right> <Esc>
+
+
+
 
 "Show whitespaces"
 "Must be inserted before colorscheme"
@@ -62,3 +77,6 @@ map! <S-Insert> <MiddleMouse>
 "По F4 открываем новую вкладку с обзором файлов"
 imap <F4> <Esc>:browse tabnew<CR> 
 map <F4> <Esc>:browse tabnew<CR>
+
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
