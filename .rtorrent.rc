@@ -1,0 +1,23 @@
+# Default directory to save files
+directory = /media/saff/Downloads/tors/
+session = /home/thought/Загрузки/rtors/session/
+
+schedule = low_diskspace,5,60,close_low_diskspace=100M
+
+encryption = allow_incoming,enable_retry
+
+schedule = watch_directory,5,5,load_start=/home/thought/Загрузки/rtors/*.torrent
+
+# bind=10.1.5.203
+# for future, port settings
+port_range = 40890-40890
+port_random = no
+
+session_save = yes
+check_hash = yes
+
+use_udp_trackers = yes
+
+dht = disable 
+dht_port = 6881
+peer_exchange = yes
