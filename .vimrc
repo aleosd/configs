@@ -1,3 +1,6 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
@@ -16,6 +19,9 @@ filetype plugin on
 "По F5 запускаем питон-приложение"
 map <F5> :w\|!python3 '%'<cr>
 imap <F5> <Esc><F5>
+
+"Settings for Racket programming
+map <C-M> :w<CR>:!rlwrap /usr/racket/bin/racket -t "%" -l racket/base -i<CR><C-D>
 
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
@@ -69,6 +75,7 @@ set statusline=%f%h%m%r\ %4b\ %{&encoding}\ \ %=%l,%c\ %p%%
 "Включение подсветки"
 :syntax on
 
+nmap <F8> :TagbarToggle<CR>
 "Активация мыши"
 set mouse=a
 "Работа мышью - вставка текста по middleclick"
